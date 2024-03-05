@@ -19,9 +19,9 @@ export default {
 			}
 
 			const apiKey = request.headers.get("X-Api-Key");
-			// if (apiKey == null || apiKey !== env.SECRET_KEY) {
-			// 	return new Response(null, { status: 404 });
-			// }
+			if (apiKey == null || apiKey !== env.SECRET_KEY) {
+				return new Response(null, { status: 404 });
+			}
 
 			if (request.method.toUpperCase() === "POST") {
 				if (request.body == null) {
