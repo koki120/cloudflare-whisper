@@ -4,3 +4,7 @@ compatibility_date = "2024-03-04"
 
 [ai]
 binding = "AI"
+
+[[kv_namespaces]]
+binding = "TEXT"
+id = ""
