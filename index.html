@@ -176,6 +176,7 @@
 				}
 
 				async function startRecording() {
+					recordedChunks = [];
 					apiKey = apiKeyInput.value;
 					if (!apiKey) {
 						console.error('Please enter your API key.');
