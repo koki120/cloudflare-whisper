@@ -28,7 +28,7 @@ export default {
 					input,
 				);
 
-				env.TEXT.put(new Date().getTime().toString(), response.text, {
+				await env.TEXT.put(new Date().getTime().toString(), response.text, {
 					expirationTtl: 604800, // one week
 				});
 
