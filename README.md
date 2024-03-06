@@ -3,5 +3,5 @@
 ## index.html to string
 
 ```zsh
-cat index.html | sed 's/"/\\"/g' | tr -d '\n' > out.txt
+sed 's/"/\\"/g' index.html | tr -d '\n' | awk '{print "export const html = \""$0"\";"}' > src/html.ts
 ```
